@@ -1,0 +1,7 @@
+requests
+Flask
+gunicorn
+Flask-SQLAlchemy
+cryptos
+eth-account
+pytest
