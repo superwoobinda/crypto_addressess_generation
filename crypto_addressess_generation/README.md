@@ -3,10 +3,17 @@ To install requirements you should run next command:
 ```
 make install
 ```
+
 To start the Application use a command:
 ```
 make start
 ```
+
+To run tests use command:
+```
+python3 app/tests.py
+```
+
 
 Availables APIs:
 
@@ -27,6 +34,7 @@ Response:
     "address": "mp5LhCeLjHSRTw2pqRgVkMk2WzbF5e1aux"
 }
 ```
+
 
 
 2. List Address. Returns a list of all the addresses generated so far.
@@ -57,6 +65,7 @@ Response:
 ]
 ```
 
+
 3. Retrieve Address. Return a created address by id.
 
 Request:
@@ -65,6 +74,7 @@ http://127.0.0.1:8000/retrieve_address/1
 ```
 Response:
 ```
+
 {
     "acronym": "BTC",
     "address": "mo8asK7MWMWE6bUzW7w9q4T9LdHh2aoNTj",
