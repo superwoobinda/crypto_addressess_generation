@@ -4,4 +4,4 @@ gunicorn
 Flask-SQLAlchemy
 cryptos
 eth-account
-pytest
+coinaddrvalidator
