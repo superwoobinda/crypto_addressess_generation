@@ -1,5 +1,10 @@
 # README #
-To install requirements you should run next command:
+First of all you need to forward to the root project:
+```
+cd crypto_addressess_generation
+```
+
+To install requirements you should run next command from the root directory:
 ```
 make install
 ```
