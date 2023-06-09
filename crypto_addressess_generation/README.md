@@ -1,55 +1,70 @@
-# README #
-First of all you need to forward to the root project:
-```
-cd crypto_addressess_generation
-```
+# README
 
-To install requirements you should run next command from the root directory:
+## Installation
+
+To install the required dependencies, run the following command:
+
 ```
 make install
 ```
 
-To start the Application use a command:
+## Usage
+
+To start the application, use the following command:
+
 ```
 make start
 ```
 
-To run tests use command:
+## Running Tests
+
+To run the tests, execute the following command:
+
 ```
 python3 app/tests.py
 ```
 
+## Available APIs
 
-Availables APIs:
+### 1. Generate Address
 
-1. Generate Address. Required param name of Cryptocurrency acronym. 'ETH' and 'BTC' are supported.
+This API allows you to generate an address for a cryptocurrency. Currently, 'ETH' and 'BTC' are supported.
 
-Request:
+**Request:**
+
 ```
 POST http://127.0.0.1:8000/generate_address
-POST Data:
+```
+
+**Request Data:**
+
+```json
 {
     "acronym": "BTC"
 }
 ```
 
-Response:
-```
+**Response:**
+
+```json
 {
     "address": "mp5LhCeLjHSRTw2pqRgVkMk2WzbF5e1aux"
 }
 ```
 
+### 2. List Address
 
+This API returns a list of all the addresses that have been generated so far.
 
-2. List Address. Returns a list of all the addresses generated so far.
+**Request:**
 
-Request:
 ```
 GET http://127.0.0.1:8000/list_address
 ```
-Response:
-```
+
+**Response:**
+
+```json
 [
     {
         "acronym": "BTC",
@@ -70,16 +85,19 @@ Response:
 ]
 ```
 
+### 3. Retrieve Address
 
-3. Retrieve Address. Return a created address by id.
+This API retrieves the details of a created address based on its ID.
 
-Request:
+**Request:**
+
 ```
-http://127.0.0.1:8000/retrieve_address/1
-```
-Response:
+GET http://127.0.0.1:8000/retrieve_address/1
 ```
 
+**Response:**
+
+```json
 {
     "acronym": "BTC",
     "address": "mo8asK7MWMWE6bUzW7w9q4T9LdHh2aoNTj",
